@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASAD Travellers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-b from-gray-100 to-gray-200">
+  
+  <!-- Header -->
+  <header class="h-20 bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center shadow-lg">
+    <h1 class="text-white text-3xl md:text-4xl font-extrabold tracking-wide">ASAD TRAVELLERS</h1>
+  </header>
+
+  <!-- Main Section -->
+  <main class="flex flex-col md:flex-row items-center justify-center p-10 gap-12">
+    
+    <!-- Booking Form -->
+    <form action="/select-seat" method="post"
+      class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md transform hover:scale-[1.01] transition duration-300">
+      <div class="flex flex-col space-y-5">
+        
+        <label for="from" class="font-semibold text-gray-700">From:</label>
+        <input list="cities" id="from" name="from" placeholder="Select departure city"
+          class="w-full p-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 outline-none transition" />
+
+        <label for="to" class="font-semibold text-gray-700">To:</label>
+        <input list="cities" id="to" name="to" placeholder="Select destination"
+          class="w-full p-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 outline-none transition" />
+
+        <datalist id="cities">
+          <option value="Lahore Thokar">
+          <option value="Lahore Kalma Chowk">
+          <option value="Rawalpindi">
+          <option value="Faisalabad">
+          <option value="Gultan">
+          <option value="Sargodha">
+          <option value="Abbottabad">
+          <option value="Faizabad">
+          <option value="Bahawalpur">
+          <option value="Hakar Chowk">
+          <option value="Bahadurpur Chowk">
+          <option value="Chichawatni">
+          <option value="Daska">
+          <option value="Gujranwala">
+          <option value="Gujrat">
+          <option value="Hyderabad">
+          <option value="Jhang">
+          <option value="Jhelum">
+          <option value="Ranipur">
+          <option value="Karachi">
+          <option value="Karachi Cantt">
+          <option value="Kohat">
+          <option value="Murree">
+          <option value="Okara Cantt">
+          <option value="Okara City">
+          <option value="Sahiwal">
+          <option value="Multan">
+          <option value="Vehari Chowk">
+          <option value="Peshawar">
+          <option value="Islamabad">
+          <option value="Quetta">
+          <option value="Sialkot">
+        </datalist>
+
+        <label for="date" class="font-semibold text-gray-700">Select Date:</label>
+        <input type="date" id="date" name="date"
+          class="w-full p-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 outline-none transition" />
+
+        <button type="submit"
+          class="bg-blue-900 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg transform hover:scale-105 transition duration-300">
+          Find Schedules
+        </button>
+      </div>
+    </form>
+
+    <!-- Bus Image -->
+    <img src="/images/asad.png" alt="ASAD Travellers Bus"
+      class="w-full md:w-[500px] rounded-xl shadow-2xl border-4 border-white transform transition duration-500 hover:scale-105" />
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/923304619423" target="_blank" 
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center animate-bounce"
+    title="Contact Sir Asadullah on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+      alt="WhatsApp" class="w-8 h-8">
+  </a>
+
+  <!-- Auto-fill Date -->
+  <script>
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').value = today;
+  </script>
+</body>
+</html>
